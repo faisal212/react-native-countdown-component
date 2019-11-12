@@ -10,10 +10,12 @@ import {
 } from 'react-native';
 import _ from 'lodash';
 import {sprintf} from 'sprintf-js';
+import { RFValue } from 'react-native-responsive-fontsize';
+import { Colors } from '../../js/utils/styles';
 
-const DEFAULT_DIGIT_STYLE = {backgroundColor: '#FAB913'};
-const DEFAULT_DIGIT_TXT_STYLE = {color: '#000'};
-const DEFAULT_TIME_LABEL_STYLE = {color: '#000'};
+const DEFAULT_DIGIT_STYLE = {backgroundColor: 'transparent'};
+const DEFAULT_DIGIT_TXT_STYLE = {color: Colors.mainColor,fontSize: RFValue(20)};
+const DEFAULT_TIME_LABEL_STYLE = {fontSize: RFValue(20),color: Colors.mainColor};
 const DEFAULT_SEPARATOR_STYLE = {color: '#000'};
 const DEFAULT_TIME_TO_SHOW = ['D', 'H', 'M', 'S'];
 const DEFAULT_TIME_LABELS = {
@@ -251,6 +253,7 @@ const styles = StyleSheet.create({
   doubleDigitCont: {
     justifyContent: 'center',
     alignItems: 'center',
+    flexDirection: "row"
   },
   digitTxt: {
     color: 'white',
